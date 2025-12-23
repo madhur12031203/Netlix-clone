@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Who's Watching?</title>
+  <style>
+    body {
+      background-color: #141414;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+        background-image: url('https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+
+    .profiles {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .profile {
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .profile:hover {
+      transform: scale(1.1);
+    }
+
+    .profile img {
+      border-radius: 10px;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 3px solid gray;
+    }
+
+    .profile-name {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+</style>
+
+  </style>
+</head>
+<body>
+
+  <h1>Who's watching?</h1>
+  <div class="profiles">
+    <div class="profile" onclick="selectProfile('Madhur')">
+      <img src="profile1.jpg" alt="Madhur" />
+      <div class="profile-name">Madhur</div>
+    </div>
+    <div class="profile" onclick="selectProfile('Guest')">
+      <img src="profile2.jpg" alt="Other" />
+      <div class="profile-name">Other</div>
+    </div>
+    <!-- Add more profiles as needed -->
+  </div>
+
+  <script>
+    function selectProfile(name) {
+      // Redirect to index.html or dashboard with profile name as query (optional)
+      window.location.href = "home.html?user=" + encodeURIComponent(name);
+    }
+  </script>
+
+</body>
+</html>
